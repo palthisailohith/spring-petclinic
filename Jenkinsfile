@@ -7,5 +7,15 @@ pipeline {
       }
     }
 
+    stage('static analysis') {
+      steps {
+        sh '''mvn clean verify sonar:sonar \\
+  -Dsonar.projectKey=petclinic \\
+  -Dsonar.projectName=\'petclinic\' \\
+  -Dsonar.host.url=http://13.235.215.239:9000 \\
+  -Dsonar.token=sqp_1120c6cc208cc397900195b858501caae1dbfccb'''
+      }
+    }
+
   }
 }
