@@ -29,7 +29,7 @@ pipeline {
 
     stage('Unit test') {
       steps {
-        sh './mvnw "-Dtest=**/petclinic/*/*.java" test'
+        sh './mvnw "-Dtest=**/Petclinic/*/*.java" test'
       }
     }
 
