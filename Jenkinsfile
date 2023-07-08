@@ -19,11 +19,11 @@ pipeline {
 
     stage('Static Analysis') {
       steps {
-        sh '''./mvnw sonar:sonar \\
+        sh '''mvn clean verify sonar:sonar \\
   -Dsonar.projectKey=Petclinic \\
   -Dsonar.projectName=\'Petclinic\' \\
   -Dsonar.host.url=http://13.235.215.239:9000 \\
-  -Dsonar.token=sqp_89cbcb1e2b503898d2ac1a9bd49383f0f641b78'''
+  -Dsonar.token=sqp_89cbcb1e2b503898d2ac1a9bd49383f0f641b788'''
       }
     }
 
